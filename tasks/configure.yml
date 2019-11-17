@@ -1,0 +1,21 @@
+---
+- name: Ensure configuration directories exist
+  file:
+    path: "{{ item }}"
+    state: directory
+    follow: yes
+  loop: "{{ php_conf_paths + php_extension_conf_paths | flatten }}"
+
+- name: Place PHP configuration file in place
+  template:
+    src: php.ini.j2
+    dest: "{{ item }}/php.ini"
+    owner: root
+    group: root
+    mode: 0644
+  loop: "{{ php_conf_paths }}"
+  notify: 
+    - __php_webserver_restart
+    - __php_fpm_restart
+
+...

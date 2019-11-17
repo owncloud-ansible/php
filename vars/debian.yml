@@ -1,0 +1,51 @@
+---
+__php_packages:
+  - "php{{ php_default_version }}-cli"
+  - "php{{ php_default_version }}-common"
+  - "php{{ php_default_version }}-dev"
+  - "php{{ php_default_version }}-fpm"
+  - "php{{ php_default_version }}-gd"
+  - "php{{ php_default_version }}-imap"
+  - "php{{ php_default_version }}-ldap"
+  - "php{{ php_default_version }}-mbstring"
+  - "php{{ php_default_version }}-opcache"
+  - "php{{ php_default_version }}-mysql"
+  - "php{{ php_default_version }}-pgsql"
+  - "php{{ php_default_version }}-xml"
+  - "php{{ php_default_version }}-xmlrpc"
+  - "php{{ php_default_version }}-zip"
+  - "php{{ php_default_version }}-intl"
+  - "php{{ php_default_version }}-curl"
+  - "libapache2-mod-php{{ php_default_version }}"
+  - php-sqlite3
+  - php-apcu
+  - php-redis
+  - php-pear
+__php_webserver_daemon: "apache2"
+
+__php_executable: php
+__php_pecl_executable: pecl
+__php_pecl_modules: []
+
+__php_conf_paths:
+  - /etc/php/{{ php_default_version }}/fpm
+  - /etc/php/{{ php_default_version }}/apache2
+  - /etc/php/{{ php_default_version }}/cli
+
+__php_extension_conf_paths:
+  - /etc/php/{{ php_default_version }}/fpm/conf.d
+  - /etc/php/{{ php_default_version }}/apache2/conf.d
+  - /etc/php/{{ php_default_version }}/cli/conf.d
+
+__php_opcache_zend_extension: "opcache.so"
+
+__php_apc_conf_filename: 20-apcu.ini
+__php_opcache_conf_filename: 10-opcache.ini
+__php_fpm_daemon: php{{ php_default_version }}-fpm
+__php_fpm_conf_path: "/etc/php/{{ php_default_version }}/fpm"
+__php_fpm_pool_conf_path: "{{ __php_fpm_conf_path }}/pool.d/www.conf"
+
+__php_fpm_pool_user: www-data
+__php_fpm_pool_group: www-data
+
+...

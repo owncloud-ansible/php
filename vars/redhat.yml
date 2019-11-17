@@ -1,0 +1,46 @@
+---
+__php_packages:
+  - "rh-php{{ php_default_version | replace('.', '') }}"
+  - "rh-php{{ php_default_version | replace('.', '') }}-php"
+  - "rh-php{{ php_default_version | replace('.', '') }}-php-cli"
+  - "rh-php{{ php_default_version | replace('.', '') }}-php-common"
+  - "rh-php{{ php_default_version | replace('.', '') }}-php-devel"
+  - "rh-php{{ php_default_version | replace('.', '') }}-php-fpm"
+  - "rh-php{{ php_default_version | replace('.', '') }}-php-gd"
+  - "rh-php{{ php_default_version | replace('.', '') }}-php-ldap"
+  - "rh-php{{ php_default_version | replace('.', '') }}-php-mbstring"
+  - "rh-php{{ php_default_version | replace('.', '') }}-php-opcache"
+  - "rh-php{{ php_default_version | replace('.', '') }}-php-mysqlnd"
+  - "rh-php{{ php_default_version | replace('.', '') }}-php-pdo"
+  - "rh-php{{ php_default_version | replace('.', '') }}-php-pear"
+  - "rh-php{{ php_default_version | replace('.', '') }}-php-xml"
+  - "rh-php{{ php_default_version | replace('.', '') }}-php-xmlrpc"
+  - "rh-php{{ php_default_version | replace('.', '') }}-php-zip"
+  - "rh-php{{ php_default_version | replace('.', '') }}-php-intl"
+  - "rh-php{{ php_default_version | replace('.', '') }}-php-curl"
+__php_webserver_daemon: "httpd24-httpd"
+
+__php_executable: "/opt/rh/rh-php{{ php_default_version | replace('.', '') }}/root/usr/bin/php"
+__php_pecl_executable: "/opt/rh/rh-php{{ php_default_version | replace('.', '') }}/root/usr/bin/pecl"
+__php_pecl_modules:
+  - redis
+  - apcu
+
+__php_conf_paths:
+  - "/etc/opt/rh/rh-php{{ php_default_version | replace('.', '') }}"
+
+__php_extension_conf_paths:
+  - "/etc/opt/rh/rh-php{{ php_default_version | replace('.', '') }}/php.d"
+
+__php_opcache_zend_extension: "/opt/rh/rh-php{{ php_default_version | replace('.', '') }}/root/usr/lib64/php/modules/opcache.so"
+
+__php_apc_conf_filename: 50-apc.ini
+__php_opcache_conf_filename: 10-opcache.ini
+__php_fpm_daemon: "rh-php{{ php_default_version | replace('.', '') }}-php-fpm"
+__php_fpm_conf_path: "/etc/opt/rh/rh-php{{ php_default_version | replace('.', '') }}"
+__php_fpm_pool_conf_path: "__php_fpm_conf_path/php-fpm.d/www.conf"
+
+__php_fpm_pool_user: apache
+__php_fpm_pool_group: apache
+
+...

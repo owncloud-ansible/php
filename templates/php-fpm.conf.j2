@@ -1,0 +1,12 @@
+;;;;;;;;;;;;;;;;;;;;;
+; FPM Configuration ;
+;;;;;;;;;;;;;;;;;;;;;
+
+include={{ php_fpm_conf_path }}/{{ php_fpm_pool_conf_path | dirname }}/*.conf
+
+;;;;;;;;;;;;;;;;;;
+; Global Options ;
+;;;;;;;;;;;;;;;;;;
+
+[global]
+error_log = /var/log/php-fpm.log

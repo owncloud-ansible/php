@@ -1,0 +1,77 @@
+---
+- name: Define php_packages
+  set_fact:
+    php_packages: "{{ __php_packages | list }}"
+  when: php_packages is not defined
+
+- name: Define extra php_packages
+  set_fact:
+    php_packages: "{{ php_packages | list + php_packages_extra | list }}"
+  when: php_packages_extra is defined
+
+- name: Define php_webserver_daemon
+  set_fact:
+    php_webserver_daemon: "{{ __php_webserver_daemon }}"
+  when: php_webserver_daemon is not defined
+
+- name: Define php_conf_paths
+  set_fact:
+    php_conf_paths: "{{ __php_conf_paths }}"
+  when: php_conf_paths is not defined
+
+- name: Define php_extension_conf_paths
+  set_fact:
+    php_extension_conf_paths: "{{ php_extension_conf_paths | default(__php_extension_conf_paths) }}"
+  when: php_extension_conf_paths is not defined
+
+- name: Define php_pecl_executable
+  set_fact:
+    php_pecl_executable: "{{ __php_pecl_executable }}"
+  when: php_pecl_executable is not defined
+
+- name: Define php_pecl_modules
+  set_fact:
+    php_pecl_modules: "{{ __php_pecl_modules }}"
+  when: php_pecl_modules is not defined
+
+- name: Define php_apc_conf_filename
+  set_fact:
+    php_apc_conf_filename: "{{ __php_apc_conf_filename }}"
+  when: php_apc_conf_filename is not defined
+
+- name: Define php_opcache_conf_filename
+  set_fact:
+    php_opcache_conf_filename: "{{ __php_opcache_conf_filename }}"
+  when: php_opcache_conf_filename is not defined
+
+- name: Define php_opcache_zend_extension
+  set_fact:
+    php_opcache_zend_extension: "{{ __php_opcache_zend_extension }}"
+  when: php_opcache_zend_extension is not defined
+
+- name: Define php_fpm_conf_path
+  set_fact:
+    php_fpm_conf_path: "{{ __php_fpm_conf_path }}"
+  when: php_fpm_conf_path is not defined
+
+- name: Define php_fpm_daemon
+  set_fact:
+    php_fpm_daemon: "{{ __php_fpm_daemon }}"
+  when: php_fpm_daemon is not defined
+
+- name: Define php_fpm_pool_conf_path
+  set_fact:
+    php_fpm_pool_conf_path: "{{ __php_fpm_pool_conf_path }}"
+  when: php_fpm_pool_conf_path is not defined
+
+- name: Define php_fpm_pool_user
+  set_fact:
+    php_fpm_pool_user: "{{ __php_fpm_pool_user }}"
+  when: php_fpm_pool_user is not defined
+
+- name: Define php_fpm_pool_group
+  set_fact:
+    php_fpm_pool_group: "{{ __php_fpm_pool_group }}"
+  when: php_fpm_pool_group is not defined
+
+...

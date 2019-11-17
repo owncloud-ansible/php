@@ -1,0 +1,8 @@
+---
+- name: Converge
+  hosts: all
+  vars:
+    php_webserver_enabled: False
+
+  roles:
+    - role: php
