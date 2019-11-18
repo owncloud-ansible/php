@@ -1,8 +1,9 @@
 ---
 php_default_version: "7.2"
 
-# PHP package state; use 'present' to make sure it's installed, or 'latest' if
-# you want to upgrade or switch versions using a new repo.
+# @var php_packages_state:description: >
+# Use `present` to make sure it's installed, or `latest` if
+# you want to upgrade.
 php_packages_state: present
 
 # @var php_packages_extra:description: >
