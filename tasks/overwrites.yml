@@ -39,7 +39,7 @@
     php_pecl_modules: "{{ __php_pecl_modules }}"
   when: php_pecl_modules is not defined
 
-- name: Define php_pecl_modules
+- name: Define php_pecl_modules_enabled
   set_fact:
     php_pecl_modules_enabled: "{{ __php_pecl_modules_enabled }}"
   when: php_pecl_modules_enabled is not defined
