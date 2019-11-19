@@ -27,8 +27,7 @@ __php_pecl_modules:
   - apcu
 
 __php_pecl_modules_enabled:
-  - src: redis.ini.j2
-    dest: "{{ php_extension_conf_paths }}/20-redis.ini"
+  - redis
 
 __php_conf_paths:
   - "/etc/opt/rh/rh-php{{ php_default_version | replace('.', '') }}"

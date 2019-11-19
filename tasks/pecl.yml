@@ -8,15 +8,15 @@
 
 - name: Enable modules installed with pecl
   template:
-    src: "{{ item.src }}"
-    dest: "{{ item.dest }}"
+    src: mod.ini.j2
+    dest: "{{ item.0 }}/{{ item.1 }}.ini"
     owner: root
     group: root
     force: yes
     mode: 0644
-  loop: "{{ __php_pecl_modules_enabled }}"
+  loop: "{{ php_extension_conf_paths | zip(php_pecl_modules_enabled) | list }}"
   loop_control:
-    label: "{{ item.dest }}"
+    label: "{{ item.0 }}/{{ item.1 }}.ini"
   notify:
     - __php_webserver_restart
     - __php_fpm_restart

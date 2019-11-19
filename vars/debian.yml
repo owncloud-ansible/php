@@ -27,6 +27,8 @@ __php_executable: php
 __php_pecl_executable: pecl
 __php_pecl_modules: []
 
+__php_pecl_modules_enabled: []
+
 __php_conf_paths:
   - /etc/php/{{ php_default_version }}/fpm
   - /etc/php/{{ php_default_version }}/apache2

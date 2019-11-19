@@ -39,6 +39,11 @@
     php_pecl_modules: "{{ __php_pecl_modules }}"
   when: php_pecl_modules is not defined
 
+- name: Define php_pecl_modules
+  set_fact:
+    php_pecl_modules_enabled: "{{ __php_pecl_modules_enabled }}"
+  when: php_pecl_modules_enabled is not defined
+
 - name: Define php_apc_conf_filename
   set_fact:
     php_apc_conf_filename: "{{ __php_apc_conf_filename }}"
