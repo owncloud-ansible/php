@@ -6,4 +6,19 @@
   changed_when: "pecl_result.rc == 0"
   failed_when: "not (('already installed' in pecl_result.stdout) or ('install ok:' in pecl_result.stdout))"
 
+- name: Enable modules installed with pecl
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    owner: root
+    group: root
+    force: yes
+    mode: 0644
+  loop: "{{ __php_pecl_modules_enabled }}"
+  loop_control:
+    label: "{{ item.dest }}"
+  notify:
+    - __php_webserver_restart
+    - __php_fpm_restart
+
 ...
