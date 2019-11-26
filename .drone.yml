@@ -49,6 +49,7 @@ trigger:
   ref:
   - refs/heads/master
   - refs/tags/**
+  - refs/pull/**
 
 depends_on:
 - linting
@@ -84,6 +85,7 @@ trigger:
   ref:
   - refs/heads/master
   - refs/tags/**
+  - refs/pull/**
 
 depends_on:
 - linting
@@ -169,6 +171,6 @@ depends_on:
 
 ---
 kind: signature
-hmac: c14c460c063b67f9794209b3bc4b5f025000d62872dcb37bf9cc0041b41cd82a
+hmac: f0fb67efb82a1c4c89c066c1f560dec1dccd57b4da0ab2d6ae9e8bd7f8c13db7
 
 ...
