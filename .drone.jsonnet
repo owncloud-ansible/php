@@ -84,6 +84,9 @@ local PipelineDocumentation = {
                 pages_directory: "_docs/",
                 target_branch: "docs",
             },
+            when: {
+                ref: ["refs/heads/master"],
+            },
         },
         {
             name: "docs",
@@ -95,9 +98,6 @@ local PipelineDocumentation = {
                 repositories: [
                     "owncloud-ansible/owncloud-ansible.github.io@source",
                 ],
-            },
-            when: {
-                status: ["success"],
             },
         },
     ],
