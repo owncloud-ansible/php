@@ -121,7 +121,7 @@ steps:
     ref:
     - refs/heads/master
 
-- name: docs
+- name: trigger
   image: plugins/downstream
   settings:
     fork: true
@@ -174,6 +174,6 @@ depends_on:
 
 ---
 kind: signature
-hmac: 269ded491d7bf34fbc2d4ff8575d1593f41207816624cb668f6b79a111266bd4
+hmac: 1e5cb631e6dd53a3a71fe34e5de8715aad47c193c51b984d780d2a40887370f2
 
 ...
