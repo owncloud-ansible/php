@@ -2,7 +2,10 @@
 title: php
 type: docs
 ---
-Ansible role to setup PHP
+
+> **WARNING**: This Ansible role is currently in beta state. Use it at your own risk. 
+
+Role to setup PHP.
 
 * [Default Variables](#default-variables)
   * [php_allow_url_fopen](#php-allow-url-fopen)
