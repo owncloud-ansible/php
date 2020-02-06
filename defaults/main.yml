@@ -1,15 +1,21 @@
 ---
 php_default_version: "7.2"
 
-# @var php_packages_state:description: >
-# Use `present` to make sure it's installed, or `latest` if
-# you want to upgrade.
-php_packages_state: present
+# @var php_apt_cache_update:description: >
+# Automatically update apt cache on package installations.
+# This setting will only applied on apt-based operating systems e.g. Ubuntu.
+# @end
+php_apt_cache_update: False
 
 # @var php_packages_extra:description: >
 # Can be used to install other dependency packages e.g. gcc (required by pecl).
 # @end
 php_packages_extra: []
+
+# @var php_packages_state:description: >
+# Use `present` to make sure it's installed, or `latest` if
+# you want to upgrade.
+php_packages_state: present
 
 # @var php_webserver_enabled:description: >
 # Set this to `False` if you're not using PHP with a webserver e.g. Apache/Nginx.

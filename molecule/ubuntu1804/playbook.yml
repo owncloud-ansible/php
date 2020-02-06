@@ -2,6 +2,7 @@
 - name: Converge
   hosts: all
   vars:
+    php_apt_cache_update: True
     php_webserver_enabled: False
 
   roles:
