@@ -3,7 +3,9 @@ title: php
 type: docs
 ---
 
-> **WARNING**: This Ansible role is currently in beta state. Use it at your own risk. 
+[![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/owncloud-ansible/php) [![Build Status](https://drone.owncloud.com/api/badges/owncloud-ansible/php/status.svg)](https://drone.owncloud.com/owncloud-ansible/php) [![GitHub](https://img.shields.io/github/license/owncloud-ansible/php)](https://github.com/owncloud-ansible/php/blob/master/LICENSE) 
+
+{{< hint warning >}} __Warning__<br/> This Ansible role is currently in beta state. Use it at your own risk. {{< /hint >}} 
 
 Role to setup PHP.
 
@@ -12,6 +14,7 @@ Role to setup PHP.
   * [php_apc_enable_cli](#php-apc-enable-cli)
   * [php_apc_enabled](#php-apc-enabled)
   * [php_apc_shm_size](#php-apc-shm-size)
+  * [php_apt_cache_update](#php-apt-cache-update)
   * [php_date_timezone](#php-date-timezone)
   * [php_default_version](#php-default-version)
   * [php_disable_functions](#php-disable-functions)
@@ -94,6 +97,16 @@ php_apc_enabled: true
 
 ```YAML
 php_apc_shm_size: 96M
+```
+
+### php_apt_cache_update
+
+Automatically update apt cache on package installations. This setting will only applied on apt-based operating systems e.g. Ubuntu.
+
+#### Default value
+
+```YAML
+php_apt_cache_update: false
 ```
 
 ### php_date_timezone
