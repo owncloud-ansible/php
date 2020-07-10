@@ -1,5 +1,5 @@
 ---
-php_default_version: "7.2"
+php_default_version: "7.3"
 
 # @var php_apt_cache_update:description: >
 # Automatically update apt cache on package installations.
