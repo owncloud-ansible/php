@@ -8,14 +8,14 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 
 
 def test_php_cli(host):
-    version = host.run("/opt/rh/rh-php72/root/usr/bin/php --version")
+    version = host.run("/opt/rh/rh-php73/root/usr/bin/php --version")
 
     assert version.succeeded
-    assert "7.2" in version.stdout
+    assert "7.3" in version.stdout
 
 
 def test_php_cli_config(host):
-    config = host.run("/opt/rh/rh-php72/root/usr/bin/php -i | tr -d ' '").stdout
+    config = host.run("/opt/rh/rh-php73/root/usr/bin/php -i | tr -d ' '").stdout
 
     assert "opcache.enable=>On=>On" in config
     assert "opcache.enable_cli=>On=>On" in config
