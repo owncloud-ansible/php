@@ -20,5 +20,3 @@
   notify:
     - __php_webserver_restart
     - __php_fpm_restart
-
-...

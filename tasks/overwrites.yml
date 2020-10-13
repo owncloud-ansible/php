@@ -83,5 +83,3 @@
   set_fact:
     php_fpm_pool_group: "{{ __php_fpm_pool_group }}"
   when: php_fpm_pool_group is not defined
-
-...
