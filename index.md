@@ -122,7 +122,7 @@ php_date_timezone: America/Chicago
 #### Default value
 
 ```YAML
-php_default_version: '7.2'
+php_default_version: '7.3'
 ```
 
 ### php_disable_functions
