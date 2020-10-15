@@ -14,8 +14,6 @@
     group: root
     mode: 0644
   loop: "{{ php_conf_paths }}"
-  notify: 
+  notify:
     - __php_webserver_restart
     - __php_fpm_restart
-
-...

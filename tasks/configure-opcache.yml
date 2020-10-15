@@ -6,7 +6,7 @@
         contains: 'zend_extension(\s+)?=(\s+)?opcache\.so'
       register: php_installed_opcache_confs
       loop: "{{ php_extension_conf_paths }}"
-    
+
     - name: Remove any non-role-supplied OpCache config files
       file:
         path: "{{ item.1.path }}"
@@ -18,7 +18,7 @@
       notify:
         - __php_webserver_restart
         - __php_fpm_restart
-    
+
     - name: Ensure OpCache config file is present
       template:
         src: opcache.ini.j2
@@ -44,5 +44,3 @@
   notify:
     - __php_webserver_restart
     - __php_fpm_restart
-
-...

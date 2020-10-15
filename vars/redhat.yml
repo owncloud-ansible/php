@@ -45,5 +45,3 @@ __php_fpm_pool_conf_path: "__php_fpm_conf_path/php-fpm.d/www.conf"
 
 __php_fpm_pool_user: apache
 __php_fpm_pool_group: apache
-
-...

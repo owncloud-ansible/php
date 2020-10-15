@@ -6,7 +6,7 @@
         contains: 'extension(\s+)?=(\s+)?apc[u]?\.so'
       register: php_installed_apc_confs
       loop: "{{ php_extension_conf_paths }}"
-    
+
     - name: Remove any non-role-supplied APCu config files
       file:
         path: "{{ item.1.path }}"
@@ -18,7 +18,7 @@
       notify:
         - __php_webserver_restart
         - __php_php_restart
-    
+
     - name: Ensure APCu config file is present
       template:
         src: apc.ini.j2
@@ -46,5 +46,3 @@
   notify:
     - __php_webserver_restart
     - __php_fpm_restart
-
-...

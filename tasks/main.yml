@@ -9,11 +9,9 @@
       errors: "ignore"
 - include_tasks: overwrites.yml
 
-- include_tasks: install.yml 
+- include_tasks: install.yml
 - include_tasks: pecl.yml
 - include_tasks: configure.yml
 - include_tasks: configure-apcu.yml
 - include_tasks: configure-opcache.yml
 - include_tasks: configure-fpm.yml
-
-...

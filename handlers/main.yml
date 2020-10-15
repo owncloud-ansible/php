@@ -12,5 +12,3 @@
     state: restarted
   listen: __php_fpm_restart
   when: php_fpm_enabled | bool
-
-...
