@@ -8,7 +8,7 @@ dependency:
 driver:
   name: delegated
 platforms:
-  - name: opensuse15
+  - name: opensuse15-php
     server_type: cx11
     image: 24146372
     from_snapshot: true
