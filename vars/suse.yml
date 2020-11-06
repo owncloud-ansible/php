@@ -5,6 +5,7 @@ __php_packages:
   - php7-fpm
   - php7-gd
   - php7-ldap
+  - php7-json
   - php7-mbstring
   - php7-opcache
   - php7-mysql
@@ -34,9 +35,7 @@ __php_conf_paths:
   - /etc/php7/cli
 
 __php_extension_conf_paths:
-  - /etc/php7/fpm
-  - /etc/php7/apache2
-  - /etc/php7/cli
+  - /etc/php7/conf.d
 
 __php_opcache_zend_extension: "opcache.so"
 
