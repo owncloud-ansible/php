@@ -20,6 +20,7 @@ __php_packages:
   - php7-sqlite
   - php7-APCu
   - php7-redis
+  - php7-posix
   - php7-pear
 __php_webserver_daemon: "apache2"
 
