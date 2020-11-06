@@ -14,6 +14,7 @@ __php_packages:
   - php7-xmlwriter
   - php7-xmlrpc
   - php7-zip
+  - php7-zlib
   - php7-intl
   - php7-curl
   - apache2-mod_php7
@@ -21,6 +22,8 @@ __php_packages:
   - php7-APCu
   - php7-redis
   - php7-posix
+  - php7-pcntl
+  - php7-ctype
   - php7-pear
 __php_webserver_daemon: "apache2"
 
