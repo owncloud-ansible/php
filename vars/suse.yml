@@ -1,0 +1,53 @@
+---
+__php_packages:
+  - php7
+  - php7-devel
+  - php7-fpm
+  - php7-gd
+  - php7-ldap
+  - php7-json
+  - php7-mbstring
+  - php7-opcache
+  - php7-mysql
+  - php7-pgsql
+  - php7-xmlreader
+  - php7-xmlwriter
+  - php7-xmlrpc
+  - php7-zip
+  - php7-zlib
+  - php7-intl
+  - php7-curl
+  - apache2-mod_php7
+  - php7-sqlite
+  - php7-APCu
+  - php7-redis
+  - php7-posix
+  - php7-pcntl
+  - php7-ctype
+  - php7-pear
+__php_webserver_daemon: "apache2"
+
+__php_executable: php
+__php_pecl_executable: pecl
+__php_pecl_modules: []
+
+__php_pecl_modules_enabled: []
+
+__php_conf_paths:
+  - /etc/php7/fpm
+  - /etc/php7/apache2
+  - /etc/php7/cli
+
+__php_extension_conf_paths:
+  - /etc/php7/conf.d
+
+__php_opcache_zend_extension: "opcache.so"
+
+__php_apc_conf_filename: apcu.ini
+__php_opcache_conf_filename: opcache.ini
+__php_fpm_daemon: php-fpm
+__php_fpm_conf_path: "/etc/php7/fpm"
+__php_fpm_pool_conf_path: "{{ __php_fpm_conf_path }}/php-fpm.d/www.conf"
+
+__php_fpm_pool_user: wwwrun
+__php_fpm_pool_group: www
