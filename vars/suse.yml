@@ -25,6 +25,7 @@ __php_packages:
   - php7-pcntl
   - php7-ctype
   - php7-pear
+  - php7-fileinfo
 __php_webserver_daemon: "apache2"
 
 __php_executable: php

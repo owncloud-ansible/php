@@ -1,0 +1,6 @@
+---
+- name: Enable Apache mods
+  apache2_module:
+    name: php7
+    state: present
+  notify: __php_webserver_restart
