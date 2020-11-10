@@ -12,14 +12,13 @@
 - include_tasks: install.yml
 - include_tasks: pecl.yml
 - include_tasks: configure.yml
-- include_tasks: "{{ lookup('first_found', params) }}"
+- include_tasks: "{{ lookup('first_found', params, errors='ignore') }}"
   vars:
     params:
       files:
         - "configure-{{ ansible_os_family | lower }}.yml"
       paths:
         - "tasks"
-      errors: "ignore"
 - include_tasks: configure-apcu.yml
 - include_tasks: configure-opcache.yml
 - include_tasks: configure-fpm.yml
