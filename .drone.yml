@@ -247,4 +247,8 @@ depends_on:
 - testing-opensuse15
 - documentation
 
+---
+kind: signature
+hmac: df15c35d975062ffd291b8271e211e49ff962af2faa7aed3d29db531fde81809
+
 ...
