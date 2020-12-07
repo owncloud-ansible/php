@@ -1,0 +1,11 @@
+---
+- name: Converge
+  hosts: all
+  vars:
+    php_packages_extra:
+      - gcc
+      - make
+    php_webserver_enabled: False
+
+  roles:
+    - role: php
