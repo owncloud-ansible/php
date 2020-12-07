@@ -17,7 +17,7 @@
         label: "{{ item.1.path }}"
       notify:
         - __php_webserver_restart
-        - __php_php_restart
+        - __php_fpm_restart
 
     - name: Ensure APCu config file is present
       template:

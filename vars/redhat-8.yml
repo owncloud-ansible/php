@@ -6,24 +6,23 @@ __php_packages:
   - "php-devel"
   - "php-fpm"
   - "php-gd"
+  - "php-intl"
   - "php-ldap"
   - "php-mbstring"
-  - "php-opcache"
   - "php-mysqlnd"
+  - "php-opcache"
   - "php-pdo"
   - "php-pear"
+  - "php-pecl-apcu"
+  - "php-pecl-zip"
   - "php-xml"
   - "php-xmlrpc"
-  - "php-zip"
-  - "php-intl"
-  - "php-curl"
 __php_webserver_daemon: "httpd"
 
 __php_executable: "/usr/bin/php"
 __php_pecl_executable: "/usr/bin/pecl"
 __php_pecl_modules:
   - redis
-  - apcu
 
 __php_pecl_modules_enabled:
   - redis
@@ -32,7 +31,7 @@ __php_conf_paths:
   - "/etc/php"
 
 __php_extension_conf_paths:
-  - "/etc/php/php.d"
+  - "/etc/php.d"
 
 __php_opcache_zend_extension: "/usr/lib64/php/modules/opcache.so"
 
