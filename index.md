@@ -23,13 +23,6 @@ Role to setup PHP.
   * [php_error_reporting](#php_error_reporting)
   * [php_expose_php](#php_expose_php)
   * [php_file_uploads](#php_file_uploads)
-  * [php_fpm_enabled](#php_fpm_enabled)
-  * [php_fpm_listen](#php_fpm_listen)
-  * [php_fpm_listen_allowed_clients](#php_fpm_listen_allowed_clients)
-  * [php_fpm_pm_max_children](#php_fpm_pm_max_children)
-  * [php_fpm_pm_max_spare_servers](#php_fpm_pm_max_spare_servers)
-  * [php_fpm_pm_min_spare_servers](#php_fpm_pm_min_spare_servers)
-  * [php_fpm_pm_start_servers](#php_fpm_pm_start_servers)
   * [php_max_execution_time](#php_max_execution_time)
   * [php_max_file_uploads](#php_max_file_uploads)
   * [php_max_input_time](#php_max_input_time)
@@ -122,7 +115,7 @@ php_date_timezone: America/Chicago
 #### Default value
 
 ```YAML
-php_default_version: '7.3'
+php_default_version: '7.4'
 ```
 
 ### php_disable_functions
@@ -171,62 +164,6 @@ php_expose_php: On
 
 ```YAML
 php_file_uploads: On
-```
-
-### php_fpm_enabled
-
-#### Default value
-
-```YAML
-php_fpm_enabled: false
-```
-
-### php_fpm_listen
-
-#### Default value
-
-```YAML
-php_fpm_listen: 127.0.0.1:9000
-```
-
-### php_fpm_listen_allowed_clients
-
-#### Default value
-
-```YAML
-php_fpm_listen_allowed_clients: 127.0.0.1
-```
-
-### php_fpm_pm_max_children
-
-#### Default value
-
-```YAML
-php_fpm_pm_max_children: 50
-```
-
-### php_fpm_pm_max_spare_servers
-
-#### Default value
-
-```YAML
-php_fpm_pm_max_spare_servers: 5
-```
-
-### php_fpm_pm_min_spare_servers
-
-#### Default value
-
-```YAML
-php_fpm_pm_min_spare_servers: 5
-```
-
-### php_fpm_pm_start_servers
-
-#### Default value
-
-```YAML
-php_fpm_pm_start_servers: 5
 ```
 
 ### php_max_execution_time
