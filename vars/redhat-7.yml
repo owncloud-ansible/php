@@ -5,7 +5,6 @@ __php_packages:
   - "rh-php{{ php_default_version | replace('.', '') }}-php-cli"
   - "rh-php{{ php_default_version | replace('.', '') }}-php-common"
   - "rh-php{{ php_default_version | replace('.', '') }}-php-devel"
-  - "rh-php{{ php_default_version | replace('.', '') }}-php-fpm"
   - "rh-php{{ php_default_version | replace('.', '') }}-php-gd"
   - "rh-php{{ php_default_version | replace('.', '') }}-php-ldap"
   - "rh-php{{ php_default_version | replace('.', '') }}-php-mbstring"
@@ -39,9 +38,3 @@ __php_opcache_zend_extension: "/opt/rh/rh-php{{ php_default_version | replace('.
 
 __php_apc_conf_filename: 50-apc.ini
 __php_opcache_conf_filename: 10-opcache.ini
-__php_fpm_daemon: "rh-php{{ php_default_version | replace('.', '') }}-php-fpm"
-__php_fpm_conf_path: "/etc/opt/rh/rh-php{{ php_default_version | replace('.', '') }}"
-__php_fpm_pool_conf_path: "__php_fpm_conf_path/php-fpm.d/www.conf"
-
-__php_fpm_pool_user: apache
-__php_fpm_pool_group: apache

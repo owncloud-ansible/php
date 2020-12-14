@@ -2,7 +2,6 @@
 __php_packages:
   - php7
   - php7-devel
-  - php7-fpm
   - php7-gd
   - php7-ldap
   - php7-json
@@ -35,7 +34,6 @@ __php_pecl_modules: []
 __php_pecl_modules_enabled: []
 
 __php_conf_paths:
-  - /etc/php7/fpm
   - /etc/php7/apache2
   - /etc/php7/cli
 
@@ -46,9 +44,3 @@ __php_opcache_zend_extension: "opcache.so"
 
 __php_apc_conf_filename: apcu.ini
 __php_opcache_conf_filename: opcache.ini
-__php_fpm_daemon: php-fpm
-__php_fpm_conf_path: "/etc/php7/fpm"
-__php_fpm_pool_conf_path: "{{ __php_fpm_conf_path }}/php-fpm.d/www.conf"
-
-__php_fpm_pool_user: wwwrun
-__php_fpm_pool_group: www

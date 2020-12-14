@@ -26,4 +26,3 @@
   when: task_files | length
 - include_tasks: configure-apcu.yml
 - include_tasks: configure-opcache.yml
-- include_tasks: configure-fpm.yml
