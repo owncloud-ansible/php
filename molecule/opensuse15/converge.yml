@@ -2,8 +2,6 @@
 - name: Converge
   hosts: all
   vars:
-    php_default_version: "7.2"
-    php_apt_cache_update: True
     php_webserver_enabled: False
 
   roles:
