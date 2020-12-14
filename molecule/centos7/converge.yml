@@ -5,7 +5,8 @@
     php_packages_extra:
       - centos-release-scl
       - gcc
-    php_webserver_enabled: False
+    php_default_version: "7.3"
+    php_webserver_enabled: True
 
   roles:
     - role: php

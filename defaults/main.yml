@@ -1,5 +1,5 @@
 ---
-php_default_version: "7.3"
+php_default_version: "7.4"
 
 # @var php_apt_cache_update:description: >
 # Automatically update apt cache on package installations.
@@ -21,14 +21,6 @@ php_packages_state: present
 # Set this to `False` if you're not using PHP with a webserver e.g. Apache/Nginx.
 # @end
 php_webserver_enabled: True
-
-php_fpm_enabled: False
-php_fpm_listen: "127.0.0.1:9000"
-php_fpm_listen_allowed_clients: "127.0.0.1"
-php_fpm_pm_max_children: 50
-php_fpm_pm_start_servers: 5
-php_fpm_pm_min_spare_servers: 5
-php_fpm_pm_max_spare_servers: 5
 
 php_opcache_enabled: True
 php_opcache_enable_cli: "1"

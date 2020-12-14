@@ -5,7 +5,7 @@
     php_packages_extra:
       - gcc
       - make
-    php_webserver_enabled: False
+    php_webserver_enabled: True
 
   roles:
     - role: php

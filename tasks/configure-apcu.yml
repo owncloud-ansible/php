@@ -17,7 +17,6 @@
         label: "{{ item.1.path }}"
       notify:
         - __php_webserver_restart
-        - __php_fpm_restart
 
     - name: Ensure APCu config file is present
       template:
@@ -32,7 +31,6 @@
         label: "{{ item }}/{{ php_apc_conf_filename }}"
       notify:
         - __php_webserver_restart
-        - __php_fpm_restart
   when: php_apc_enabled | bool
 
 - name: Remove APCu config file if APC is disabled
@@ -45,4 +43,3 @@
   when: not php_apc_enabled | bool
   notify:
     - __php_webserver_restart
-    - __php_fpm_restart
