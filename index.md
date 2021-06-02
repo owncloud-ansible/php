@@ -16,6 +16,7 @@ Role to setup PHP.
   * [php_apc_shm_size](#php_apc_shm_size)
   * [php_apt_cache_update](#php_apt_cache_update)
   * [php_date_timezone](#php_date_timezone)
+  * [php_default_socket_timeout](#php_default_socket_timeout)
   * [php_default_version](#php_default_version)
   * [php_disable_functions](#php_disable_functions)
   * [php_display_errors](#php_display_errors)
@@ -108,6 +109,14 @@ php_apt_cache_update: false
 
 ```YAML
 php_date_timezone: America/Chicago
+```
+
+### php_default_socket_timeout
+
+#### Default value
+
+```YAML
+php_default_socket_timeout: '{{ php_max_execution_time }}'
 ```
 
 ### php_default_version
