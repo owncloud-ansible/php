@@ -7,7 +7,7 @@
         - "{{ ansible_os_family | lower }}.yml"
       paths:
         - "vars"
-    var_files: "{{ lookup('first_found', params, errors='ignore') }}"
+    var_files: "{{ lookup('first_found', params, errors='ignore', wantlist=True) }}"
   when: var_files | length > 0
 
 - include_tasks: overwrites.yml
@@ -22,7 +22,7 @@
         - "configure-{{ ansible_os_family | lower }}.yml"
       paths:
         - "tasks"
-    task_files: "{{ lookup('first_found', params, errors='ignore') }}"
-  when: task_files | length
+    task_files: "{{ lookup('first_found', params, errors='ignore', wantlist=True) }}"
+  when: task_files | length > 0
 - include_tasks: configure-apcu.yml
 - include_tasks: configure-opcache.yml
