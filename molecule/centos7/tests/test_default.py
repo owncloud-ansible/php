@@ -3,8 +3,7 @@ import os
 import testinfra.utils.ansible_runner
 
 testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
-    os.environ['MOLECULE_INVENTORY_FILE']
-).get_hosts('all')
+    os.environ["MOLECULE_INVENTORY_FILE"]).get_hosts("all")
 
 
 def test_php_cli(host):
@@ -15,7 +14,8 @@ def test_php_cli(host):
 
 
 def test_php_cli_config(host):
-    config = host.run("/opt/rh/rh-php73/root/usr/bin/php -i | tr -d ' '").stdout
+    config = host.run(
+        "/opt/rh/rh-php73/root/usr/bin/php -i | tr -d ' '").stdout
 
     assert "opcache.enable=>On=>On" in config
     assert "opcache.enable_cli=>On=>On" in config
