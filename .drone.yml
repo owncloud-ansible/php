@@ -36,41 +36,6 @@ trigger:
 
 ---
 kind: pipeline
-name: testing-ubuntu1804
-
-platform:
-  os: linux
-  arch: amd64
-
-concurrency:
-  limit: 1
-
-workspace:
-  base: /drone/src
-  path: php
-
-steps:
-- name: molecule
-  image: thegeeklab/molecule:3
-  commands:
-  - molecule test -s ubuntu1804
-  environment:
-    HCLOUD_TOKEN:
-      from_secret: hcloud_token
-    PY_COLORS: 1
-    USER: root
-
-trigger:
-  ref:
-  - refs/heads/master
-  - refs/tags/**
-  - refs/pull/**
-
-depends_on:
-- linting
-
----
-kind: pipeline
 name: testing-ubuntu2004
 
 platform:
@@ -244,7 +209,6 @@ trigger:
   - refs/pull/**
 
 depends_on:
-- testing-ubuntu1804
 - testing-ubuntu2004
 - testing-centos7
 - testing-rocky8
@@ -333,6 +297,6 @@ depends_on:
 
 ---
 kind: signature
-hmac: 3964f7762532666f87f1cf411bdd0058ce93b785715c2f2ec1924f2cb4ff2b20
+hmac: 4f42ce8ed6990b6587abba065d72da4933eece14ed2cfca05aaa29305f703815
 
 ...
