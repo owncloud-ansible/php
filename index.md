@@ -3,7 +3,7 @@ title: php
 type: docs
 ---
 
-[![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/owncloud-ansible/php) [![Build Status](https://drone.owncloud.com/api/badges/owncloud-ansible/php/status.svg)](https://drone.owncloud.com/owncloud-ansible/php) [![GitHub](https://img.shields.io/github/license/owncloud-ansible/php)](https://github.com/owncloud-ansible/php/blob/master/LICENSE) 
+[![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/owncloud-ansible/php) [![Build Status](https://drone.owncloud.com/api/badges/owncloud-ansible/php/status.svg)](https://drone.owncloud.com/owncloud-ansible/php) [![GitHub](https://img.shields.io/github/license/owncloud-ansible/php)](https://github.com/owncloud-ansible/php/blob/main/LICENSE) 
 
 {{< hint warning >}} __Warning__<br/> This Ansible role is currently in beta state. Use it at your own risk. {{< /hint >}} 
 
