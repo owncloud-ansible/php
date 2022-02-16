@@ -11,7 +11,7 @@ def test_php_cli(host):
     version = host.run("/usr/bin/php --version")
 
     assert version.succeeded
-    assert "7.2" in version.stdout
+    assert "7.4" in version.stdout
 
 
 def test_php_cli_config(host):

@@ -1,6 +1,6 @@
 ---
 __php_packages:
-  - "php"
+  - "@php:{{ php_default_version }}/minimal"
   - "php-cli"
   - "php-common"
   - "php-devel"
