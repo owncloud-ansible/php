@@ -1,0 +1,8 @@
+---
+- name: Ensure php-fpm is disabled
+  service:
+    name: "php-fpm"
+    enabled: False
+    masked: True
+    state: stopped
+  when: ansible_distribution_major_version == "8"
