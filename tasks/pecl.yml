@@ -14,7 +14,7 @@
     group: root
     force: yes
     mode: 0644
-  loop: "{{ php_extension_conf_paths | zip(php_pecl_modules_enabled) | list }}"
+  loop: "{{ php_extension_conf_paths | product(php_pecl_modules_enabled) | list }}"
   loop_control:
     label: "{{ item.0 }}/{{ item.1 }}.ini"
   notify:
